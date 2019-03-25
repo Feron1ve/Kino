@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 100px;
+    background: #b9fff0;
+
+}
+.container {
+    width: 404px;
+    height: 404px;
+
+}
+
+.element {
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+    background: lightgreen;
+    display: inline-block;
+    margin: 5px;
+}
+#menu {
+    display: flex;
+}
