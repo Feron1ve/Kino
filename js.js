@@ -1,34 +1,32 @@
- var colorArray2 = document.body.getElementsByClassName("container");
-    for (var i = 0; i < colorArray2.length; i++) {
-        var innerHtml = "";
-        for (var j = 0; j < 99; j++) {
-            innerHtml += '<div class="element"></div>';
+var colorArray2 = document.body.getElementsByClassName("container");
+for (var i = 0; i < colorArray2.length; i++) {
+    var innerHtml = "";
+    console.log(colorArray2)
+    for (var j = 1; j <= 9; j++) {
+        let row = document.createElement('div');
+        row.setAttribute('class', 'row');
+        row.innerHTML = `<div class="range"> ${j} ряд </div>`
+        colorArray2[i].appendChild(row);
+        for (let p = 1; p <= 11; p++) {
+            let place = document.createElement('div');
+            place.setAttribute('class', 'element');
+            place.innerHTML = `${p}`
+            let selected = false;
+            place.onclick = function() {
+                selected = !selected;
+                place.setAttribute('style', selected
+                    ? 'background:#EEAB06'
+                    : 'background:#B8EE1D');
+            };
+
+            row.appendChild(place);
         }
-        colorArray2[i].innerHTML = innerHtml;
     }
 
-/*function createDiv(className){
-    let div = document.createElement('div');
-    div.className = className;
-    div.style.width  = '20px';
-    div.style.height = '20px';
-    div.style.backgroundColor = 'red'
-    return div;
-}*/
-/*
-for (var i = 0; i < 10; i++) {
-    document.body.appendChild(createDiv('part1'));
+    // colorArray2[i].innerHTML = innerHtml;
 }
-for (var i = 0; i < 10; i++) {
-    document.body.appendChild(createDiv('part2'));
+
+
+function fun(){
+    alert("Успешное бронирование");
 }
-for (var i = 0; i < 10; i++) {
-    document.body.appendChild(createDiv('part3'));
-}
-for (var i = 0; i < 10; i++) {
-    document.body.appendChild(createDiv('part4'));
-}
-for (var i = 0; i < 10; i++) {
-    document.body.appendChild(createDiv('part5'));
-}
-*/

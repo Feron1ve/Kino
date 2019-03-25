@@ -7,18 +7,25 @@ body {
     background: #b9fff0;
 
 }
-.container {
-    width: 404px;
-    height: 404px;
-
-}
 
 .element {
     border: 1px solid black;
     width: 25px;
     height: 25px;
-    background: lightgreen;
+    background: #B8EE1D;
     display: inline-block;
+    margin: 5px;
+    text-align: center;
+}
+.element:hover {
+    background-color: #EEAB06;
+}
+.range {
+    margin: 5px;
+}
+.row {
+    height: 25px;
+    display: flex;
     margin: 5px;
 }
 #menu {
